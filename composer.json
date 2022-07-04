@@ -1,0 +1,38 @@
+{
+    "name": "xylemical/cache",
+    "type": "library",
+    "license": "MIT",
+    "description": "Provides framework for cache storage.",
+    "keywords": [
+        "html"
+    ],
+    "homepage": "https://github.com/xylemical/cache",
+    "autoload": {
+        "psr-4": {
+            "Xylemical\\Cache\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xylemical\\Cache\\": "tests/src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "xylemical/time": "dev-master"
+    },
+    "require-dev": {
+        "xylemical/composer-dev-bundle": "^0.1.0"
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit && vendor/bin/phpstan analyse && vendor/bin/phpcs",
+        "test-coverage": "php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html report"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
